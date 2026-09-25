@@ -16,55 +16,32 @@ La investigación aportada por el supervisor permitió definir políticas inicia
 - workshops;
 - observación;
 - análisis documental;
-- procesamiento posterior a sesiones;
-- validación de resultados;
-- transformación de insumos en requisitos candidatos.
+- transformación de insumos en requisitos candidatos;
+- priorización con MoSCoW, RICE, WSJF, Kano, Value vs Effort y ranking;
+- baseline;
+- Change Request;
+- análisis de impacto;
+- control de cambios;
+- AS-IS / TO-BE;
+- BPMN 2.0 básico;
+- derivación trazable de requisitos desde procesos.
 
-## 1. Priorización
-
-Aún no se ha elegido un método:
-- MoSCoW;
-- valor/riesgo;
-- WSJF;
-- otra técnica;
-- combinación según contexto.
-
-No se debe incorporar ninguna por defecto sin decisión.
-
-## 2. Baseline y control de cambios
-
-Falta definir:
-- cuándo un requisito entra en baseline;
-- quién puede aprobar cambios;
-- cómo versionar;
-- cómo propagar impacto;
-- cuándo una versión deja de ser vigente.
-
-## 3. Modelado
-
-La investigación menciona BPMN, casos de uso y diagramas, pero falta decidir:
-- cuándo usar cada técnica;
-- nivel de detalle;
-- formato esperado;
-- reglas de calidad.
-
-## 4. UAT
+## 1. UAT
 
 Falta establecer:
 - responsabilidad exacta del agente;
 - diferencia entre preparar UAT y aprobar UAT;
-- evidencia necesaria.
+- evidencia necesaria;
+- relación con QA y stakeholders.
 
-## 5. Jerarquía de estándares
-
-La investigación menciona ISO/IEC/IEEE 29148, INCOSE, BABOK e INVEST.
+## 2. Jerarquía de estándares
 
 Antes de una versión madura debemos definir:
 - cuál es el marco principal cuando existan diferencias;
 - qué reglas son obligatorias y cuáles heurísticas;
 - cómo manejar estándares internos de una organización.
 
-## 6. Métricas para sistemas con IA
+## 3. Métricas para sistemas con IA
 
 Falta definir:
 - cuándo aplica cada métrica;
@@ -73,4 +50,25 @@ Falta definir:
 - quién define los umbrales;
 - cómo evitar métricas engañosas.
 
-Estas preguntas no bloquean la versión 0.1 para inventario, elicitación, extracción, evaluación de calidad, contradicciones y trazabilidad básica.
+## 4. Gobierno de priorización por contexto
+
+Ya se incorporaron las técnicas, pero en una versión posterior conviene definir con mayor precisión:
+- qué técnica es predeterminada según tipo de proyecto;
+- cuándo combinar MoSCoW + RICE o WSJF;
+- cómo tratar dependencias regulatorias;
+- cómo incorporar costo de oportunidad.
+
+## 5. Nivel avanzado de BPMN
+
+La versión actual cubre modelado básico suficiente para análisis.
+
+Queda pendiente investigar:
+- eventos intermedios avanzados;
+- boundary events;
+- event subprocesses;
+- compensación;
+- transacciones;
+- choreography/conversation;
+- reglas formales completas de BPMN 2.0.
+
+Esto no bloquea el uso del agente para procesos de negocio comunes.
