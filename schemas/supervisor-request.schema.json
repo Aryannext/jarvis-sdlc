@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Solicitud al Supervisor JARVIS",
+  "type": "object",
+  "required": ["id", "prioridad", "tipo", "problema", "pregunta_exacta", "impacto_si_no_responde"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^SUP-[0-9]+$"},
+    "prioridad": {
+      "type": "string",
+      "enum": ["critica", "alta", "media", "baja"]
+    },
+    "tipo": {
+      "type": "string",
+      "enum": ["regla_negocio", "autoridad", "investigacion_mundo_real", "riesgo", "acceso", "legal", "otro"]
+    },
+    "problema": {"type": "string", "minLength": 1},
+    "por_que_importa": {"type": ["string", "null"]},
+    "investigado": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "evidencia_disponible": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "pregunta_exacta": {"type": "string", "minLength": 1},
+    "necesita": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "impacto_si_no_responde": {"type": "string", "minLength": 1},
+    "puede_continuar": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "additionalProperties": false
+}

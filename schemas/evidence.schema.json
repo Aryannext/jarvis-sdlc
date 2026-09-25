@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidencia JARVIS",
+  "type": "object",
+  "required": ["id", "afirmacion", "tipo", "estado", "confianza", "fuente"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^EV-[0-9]+$"},
+    "afirmacion": {"type": "string", "minLength": 1},
+    "tipo": {
+      "type": "string",
+      "enum": ["documental", "codigo", "prueba", "runtime", "investigacion", "stakeholder", "otro"]
+    },
+    "estado": {
+      "type": "string",
+      "enum": ["confirmada", "respaldada", "probable", "posible", "especulativa", "contradicha", "desconocida"]
+    },
+    "confianza": {
+      "type": "string",
+      "enum": ["alta", "media", "baja", "no_determinada"]
+    },
+    "fuente": {"type": "string", "minLength": 1},
+    "ubicacion": {"type": ["string", "null"]},
+    "observaciones": {"type": ["string", "null"]},
+    "relacionado_con": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

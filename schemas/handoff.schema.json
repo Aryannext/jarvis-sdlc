@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Entrega entre agentes JARVIS",
+  "type": "object",
+  "required": ["id", "origen", "destino", "estado", "objetivo", "salidas"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^HAND-[0-9]+$"},
+    "origen": {"type": "string", "minLength": 1},
+    "destino": {"type": "string", "minLength": 1},
+    "estado": {
+      "type": "string",
+      "enum": ["completado", "parcial", "bloqueado", "rechazado"]
+    },
+    "objetivo": {"type": "string", "minLength": 1},
+    "salidas": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "evidencias": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "bloqueos": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "incertidumbres": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "archivos_generados": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "siguiente_accion_recomendada": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
