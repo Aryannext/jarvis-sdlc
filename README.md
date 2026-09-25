@@ -1,30 +1,30 @@
 # JARVIS SDLC
 
-JARVIS SDLC is a local-first, multi-agent software engineering system intended to support the full software lifecycle under human supervision.
+JARVIS SDLC es un sistema local, multiagente y orientado a ingeniería de software, diseñado para apoyar el ciclo de vida completo del software bajo supervisión humana.
 
-The project is being built incrementally. Specialized agents will not be defined from generic prompts: each specialty will be researched, specified, tested, and versioned before it becomes part of the system.
+El proyecto se construirá de forma incremental. Los agentes especializados no se definirán a partir de prompts genéricos: cada especialidad será investigada, especificada, probada y versionada antes de incorporarse al sistema.
 
-## Core direction
+## Dirección principal
 
-- Human supervisor, autonomous orchestration.
-- Specialized agents with clear boundaries and handoffs.
-- Evidence over authority or assumptions.
-- For existing projects: understand documentation and intended behavior before judging the implementation.
-- Distinguish intended system, implemented system, and observed runtime behavior.
-- Do not accept user statements, documentation, tests, or code as automatically correct; verify and reconcile evidence.
-- Escalate to the supervisor when real-world information, authority, or unresolved ambiguity is required.
-- Local-first execution on Ubuntu.
-- Initial AI runtime: Claude Code authenticated through Claude Pro, without paid API usage.
-- Web research is not treated as truth by default; sources must be evaluated before being incorporated.
+- Supervisor humano y orquestación autónoma.
+- Agentes especializados con límites, responsabilidades y entregas claramente definidos.
+- La evidencia tiene prioridad sobre la autoridad, las suposiciones o la opinión.
+- En proyectos existentes: comprender primero la documentación y el comportamiento esperado antes de juzgar la implementación.
+- Diferenciar siempre entre sistema esperado, sistema implementado y sistema observado en ejecución.
+- No aceptar automáticamente como correctas las afirmaciones del usuario, la documentación, las pruebas ni el código; deben verificarse y reconciliarse mediante evidencia.
+- Escalar al supervisor cuando sea necesaria información del mundo real, autoridad para decidir o exista una ambigüedad que no pueda resolverse internamente.
+- Ejecución local en Ubuntu como principio base.
+- Motor inicial de IA: Claude Code autenticado mediante Claude Pro, evitando el uso de API de pago.
+- La investigación web no se considera verdadera por defecto; las fuentes deben evaluarse antes de incorporarlas al conocimiento del sistema.
 
-## Initial milestone
+## Primer objetivo
 
-The first end-to-end workflow will be:
+El primer flujo completo será:
 
 `AUDIT_EXISTING_PROJECT`
 
-Its purpose is to take an existing software project, reconstruct what it is supposed to do from its available documentation and artifacts, inspect the implementation and runtime behavior, identify discrepancies and defects, investigate likely causes, and produce evidence-backed findings.
+Su propósito es recibir un proyecto de software existente, reconstruir lo que debería hacer a partir de su documentación y artefactos disponibles, inspeccionar la implementación y el comportamiento en ejecución, identificar discrepancias y defectos, investigar sus causas más probables y producir hallazgos respaldados por evidencia.
 
-## Status
+## Estado
 
-Bootstrap phase.
+Fase de cimentación.
