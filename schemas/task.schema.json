@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tarea JARVIS",
+  "type": "object",
+  "required": ["id", "objetivo", "estado", "workflow", "estado_workflow"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^TASK-[0-9]+$"},
+    "objetivo": {"type": "string", "minLength": 1},
+    "estado": {
+      "type": "string",
+      "enum": ["pendiente", "en_progreso", "bloqueada", "esperando_supervisor", "completada", "cancelada"]
+    },
+    "workflow": {"type": "string", "minLength": 1},
+    "estado_workflow": {"type": "string", "minLength": 1},
+    "agente_asignado": {"type": ["string", "null"]},
+    "entradas": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "salida_esperada": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "criterios_finalizacion": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "dependencias": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "reintentos": {"type": "integer", "minimum": 0}
+  },
+  "additionalProperties": false
+}
