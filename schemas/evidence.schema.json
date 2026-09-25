@@ -21,6 +21,21 @@
     "fuente": {"type": "string", "minLength": 1},
     "ubicacion": {"type": ["string", "null"]},
     "observaciones": {"type": ["string", "null"]},
+    "alcance_inspeccion": {
+      "type": "object",
+      "properties": {
+        "artefactos_identificados": {"type": ["integer", "null"], "minimum": 0},
+        "artefactos_inspeccionados": {"type": ["integer", "null"], "minimum": 0},
+        "artefactos_inspeccionados_parcialmente": {"type": ["integer", "null"], "minimum": 0},
+        "busqueda_exhaustiva": {"type": "boolean"},
+        "limites": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "required": ["busqueda_exhaustiva"],
+      "additionalProperties": false
+    },
     "relacionado_con": {
       "type": "array",
       "items": {"type": "string"},
