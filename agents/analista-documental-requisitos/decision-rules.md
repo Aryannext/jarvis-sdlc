@@ -119,3 +119,57 @@ Un requisito obtenido de una tarea, gateway, objeto de datos o evento BPMN entra
 
 ## DR-040 — Modelo complejo debe simplificarse
 Si un diagrama deja de ser comprensible para sus stakeholders, usar subprocesos, narrativa o división del proceso en lugar de añadir símbolos sin necesidad.
+
+## DR-041 — UAT valida negocio; QA valida comportamiento técnico
+UAT no sustituye pruebas técnicas. Un sistema puede pasar pruebas de QA y fallar UAT por no servir al proceso real.
+
+## DR-042 — Usuario real no equivale a autoridad de cambio
+Un tester UAT puede detectar una necesidad, pero su solicitud no modifica automáticamente el baseline.
+
+## DR-043 — Defecto y cambio deben separarse
+Si el sistema incumple requisito/criterio vigente, es candidato a defecto. Si el usuario pide comportamiento distinto, es candidato a Change Request.
+
+## DR-044 — Sign-off no pertenece al agente
+El agente prepara evidencia y estado; la aceptación formal corresponde a la autoridad de negocio definida.
+
+## DR-045 — Umbrales de UAT requieren fuente
+Porcentajes de éxito, defectos permitidos y criterios de salida no se adoptan de ejemplos generales.
+
+## DR-046 — Trazabilidad vertical obligatoria para elementos materiales
+Un Solution Requirement debe poder rastrearse hacia la necesidad de stakeholder y el objetivo de negocio cuando exista esa jerarquía.
+
+## DR-047 — Transition Requirements son temporales
+Migración, capacitación, cutover u otras capacidades de transición no deben confundirse con funcionalidad permanente de la solución.
+
+## DR-048 — No todas las referencias tienen la misma autoridad
+Ley/regulación aplicable, contrato, política obligatoria, baseline, estándar adoptado, guía y heurística deben distinguirse.
+
+## DR-049 — La versión del estándar importa
+No asumir vigencia de una norma por nombre. Registrar edición/versión y estado de verificación.
+
+## DR-050 — Guía no anula obligación
+Una recomendación metodológica no puede contradecir una obligación legal, contractual u organizacional superior.
+
+## DR-051 — Métrica de IA parte de la tarea
+No elegir Accuracy, F1, Hallucination Rate u otra métrica sin relacionarla con la función y riesgo del componente.
+
+## DR-052 — Definir operacionalmente la métrica
+Toda métrica material necesita definición, método, muestra/dataset, frecuencia, responsable y umbral con fuente.
+
+## DR-053 — Benchmark externo no es objetivo interno
+Los valores de artículos, proveedores o ejemplos pueden orientar, pero no se convierten en requisito sin justificación.
+
+## DR-054 — Métricas pueden entrar en conflicto
+Calidad, latencia, costo, seguridad y autonomía pueden tener trade-offs. El agente debe hacerlos visibles.
+
+## DR-055 — UAT no sustituye evaluación estadística de IA
+Unos pocos escenarios de usuario no prueban métricas que requieren muestras amplias o análisis estadístico.
+
+## DR-056 — Cambio de modelo puede ser cambio controlado
+Actualizaciones de modelo, prompt, retrieval, herramientas o dataset pueden requerir Change Request y regresión según impacto.
+
+## DR-057 — Drift requiere criterio previo
+No declarar drift solo porque una distribución cambió; debe existir método, baseline y regla de detección.
+
+## DR-058 — LLM-as-judge es método, no verdad
+Si se usa evaluación automática con otro modelo, debe documentarse metodología, limitaciones y, cuando sea necesario, revisión humana.
