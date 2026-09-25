@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
 import re
-import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 AGENT = ROOT / ".claude" / "agents" / "analista-documental-requisitos.md"
@@ -9,6 +8,7 @@ AGENT = ROOT / ".claude" / "agents" / "analista-documental-requisitos.md"
 REQUIRED_KNOWLEDGE = [
     "README.md",
     "decision-rules.md",
+    "evidence-scope.md",
     "workflow.md",
     "elicitation.md",
     "interviews.md",
