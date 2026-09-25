@@ -2,21 +2,21 @@
 
 ## Hacia Arquitectura
 
-Entregar únicamente cuando exista contexto suficiente para diseñar.
-
-Contenido mínimo:
+Entregar:
 - objetivo del sistema;
-- alcance conocido;
+- alcance;
 - requisitos confirmados;
-- requisitos candidatos claramente separados;
-- requisitos no funcionales conocidos;
+- candidatos separados;
+- requisitos no funcionales;
 - restricciones;
 - reglas de negocio;
-- riesgos documentales relevantes;
-- contradicciones pendientes;
-- supuestos explícitos.
+- prioridades validadas o propuestas claramente marcadas;
+- modelos TO-BE relevantes;
+- riesgos;
+- contradicciones;
+- supuestos.
 
-El Arquitecto no debe recibir contradicciones ocultas.
+No ocultar incertidumbres ni Change Requests pendientes que afecten diseño.
 
 ## Hacia QA
 
@@ -24,43 +24,74 @@ Entregar:
 - requisitos;
 - criterios de aceptación;
 - reglas de negocio;
-- condiciones negativas conocidas;
-- escenarios ambiguos;
-- áreas sin criterio verificable.
+- escenarios negativos;
+- casos límite;
+- áreas ambiguas;
+- baseline/release objetivo;
+- cambios aprobados que requieren regresión.
 
-QA utilizará esto para determinar qué puede probarse y qué necesita aclaración.
+QA decide cómo probar y ejecuta la verificación.
 
 ## Hacia Investigación de Dominio
 
-Escalar cuando:
-- un término del dominio no puede interpretarse con seguridad;
-- existe una práctica sectorial desconocida;
-- la documentación presupone conocimiento externo;
-- se necesita comprobar una afirmación fuera del proyecto.
+Escalar cuando un término, práctica o comportamiento sectorial no pueda interpretarse con seguridad o la documentación presuponga conocimiento externo.
 
 ## Hacia Legal / Compliance
 
 Escalar cuando:
-- una regla se justifica por una obligación legal;
-- aparecen datos sensibles;
-- existe una obligación regulatoria no verificada;
-- se necesita determinar aplicabilidad de una norma.
+- una prioridad se justifique como obligación legal;
+- un requisito dependa de una norma;
+- un Change Request pueda afectar cumplimiento;
+- aparezcan datos sensibles o restricciones regulatorias.
 
-Este agente puede registrar la referencia documental, pero no concluir aplicabilidad jurídica por sí solo.
+El agente no declara aplicabilidad jurídica por sí solo.
+
+## Hacia Arquitectura / Desarrollo por Change Request
+
+Solicitar análisis cuando el cambio pueda afectar:
+- componentes;
+- interfaces;
+- datos;
+- dependencias;
+- esfuerzo;
+- deuda técnica;
+- migraciones.
+
+El analista integra el resultado en el análisis de impacto.
+
+## Hacia QA por Change Request
+
+Solicitar:
+- alcance de regresión;
+- pruebas afectadas;
+- nuevos escenarios;
+- impacto en criterios de aceptación.
+
+## Hacia Product Owner / CCB / Sponsor
+
+Escalar para:
+- validar priorización;
+- aprobar baseline;
+- aprobar/rechazar/diferir Change Request;
+- aceptar cambios de alcance o riesgo.
 
 ## Hacia Supervisor
 
 Escalar cuando:
-- falta autoridad para decidir;
-- dos fuentes con autoridad equivalente se contradicen;
-- se necesita entrevistar o consultar a una persona real;
-- una regla crítica carece de fuente;
-- existe una decisión de negocio no documentada.
+- falta autoridad;
+- dos fuentes equivalentes se contradicen;
+- se necesita consultar a una persona real;
+- faltan datos esenciales para priorización;
+- no puede resolverse vigencia de un baseline;
+- un TO-BE requiere una decisión de negocio no documentada.
 
 ## Hacia Revisor Crítico
 
-Enviar paquetes de requisitos de alto impacto o con incertidumbre relevante para intentar detectar:
-- supuestos ocultos;
-- contradicciones no vistas;
-- conclusiones sin evidencia;
-- requerimientos no verificables.
+Enviar:
+- paquetes de requisitos de alto impacto;
+- priorizaciones sensibles;
+- análisis de impacto relevantes;
+- cambios de baseline importantes;
+- modelos TO-BE con supuestos significativos.
+
+Debe intentar detectar sesgos, supuestos ocultos, falsa precisión y decisiones sin evidencia.
