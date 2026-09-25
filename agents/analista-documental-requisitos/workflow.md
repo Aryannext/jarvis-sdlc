@@ -1,140 +1,162 @@
 # Workflow — Analista Documental y de Requisitos v0.1
 
 ## 1. Recibir contexto
-Confirmar objetivo, proyecto, estado del workflow, permisos, fuentes disponibles y salida esperada.
+Confirmar objetivo, proyecto, estado, permisos, fuentes, autoridad y salida esperada.
 
 ## 2. Inventariar documentación
-Localizar y clasificar artefactos por tipo, ruta, versión, fecha, estado y relación con el proyecto.
+Clasificar artefactos por tipo, ruta, versión, fecha, estado y relación.
 
 ## 3. Evaluar control documental
-Revisar duplicados, versiones, documentos sin fecha/responsable, referencias rotas, obsolescencia, contradicciones, aprobaciones y ausencias.
+Revisar duplicados, versiones, obsolescencia, contradicciones, aprobaciones y ausencias.
 
 ## 4. Ejecutar elicitación cuando sea necesaria
-Elegir técnica según contexto: análisis documental, entrevista, workshop, observación, encuesta, prototipo, escenario o análisis de interfaces.
+Elegir técnica según contexto y conservar procedencia.
 
 ## 5. Extraer información de negocio y requisitos
-Identificar necesidades, objetivos, stakeholders, procesos, requisitos funcionales/no funcionales, restricciones, reglas, criterios, supuestos y dependencias.
+Identificar objetivos, stakeholders, procesos, requisitos, restricciones, reglas, criterios, supuestos y dependencias.
 
 ## 6. Clasificar certeza
-Marcar cada elemento como confirmado, candidato, contradictorio, incompleto, obsoleto, rechazado o desconocido.
+Marcar elementos como confirmados, candidatos, contradictorios, incompletos, obsoletos, rechazados o desconocidos.
 
-## 7. Evaluar calidad del requisito individual
-Evaluar necesidad, nivel de abstracción, ambigüedad, completitud, atomicidad, factibilidad, verificabilidad, corrección y conformidad.
+## 7. Clasificar jerarquía del requisito
+Distinguir:
+- Business;
+- Stakeholder;
+- Solution Functional;
+- Solution Non-Functional;
+- Transition.
 
-## 8. Evaluar calidad del conjunto
-Revisar completitud, consistencia, factibilidad conjunta, comprensibilidad, trazabilidad y terminología.
+Construir trazabilidad vertical.
 
-## 9. Evaluar historias de usuario
-Aplicar INVEST cuando corresponda sin convertirlo en scoring mecánico.
+## 8. Evaluar calidad
+Aplicar criterios de necesidad, apropiación, ambigüedad, completitud, atomicidad, factibilidad, verificabilidad, corrección y conformidad.
 
-## 10. Evaluar criterios de aceptación
-Comprobar especificidad, observabilidad, pass/fail, atomicidad, cobertura y ausencia de implementación injustificada.
+## 9. Evaluar historias y criterios
+Aplicar INVEST cuando corresponda y revisar criterios de aceptación.
 
-## 11. Detectar contradicciones y brechas
-Buscar incompatibilidades, falta de fuente, AS-IS/TO-BE mezclados, restricciones sin justificación, criterios insuficientes y términos vagos.
+## 10. Detectar contradicciones y reformular
+Conservar original, defectos, información faltante, propuesta y validación necesaria.
 
-## 12. Proponer reformulación
-Conservar original, enumerar defectos, identificar información faltante, proponer versión mejorada y mantenerla como propuesta hasta validación.
+## 11. Modelar procesos
+Construir AS-IS y TO-BE cuando aporte valor. Los requisitos derivados de BPMN entran como candidatos.
 
-## 13. Modelar procesos cuando aporte valor
-
-### AS-IS
-Construir a partir de entrevistas, observación, documentación y evidencia operativa.
-
-### TO-BE
-Diseñar únicamente con problemas, necesidades, restricciones y decisiones validadas.
-
-### BPMN
-Usar elementos básicos suficientes para representar actores, tareas, decisiones, mensajes y datos sin complejidad innecesaria.
-
-Todo requisito derivado del modelo entra como candidato.
-
-## 14. Construir trazabilidad
+## 12. Construir trazabilidad
 
 ```text
-Fuente / sesión / proceso
-    ↓
-Necesidad
-    ↓
-Requisito
-    ↓
-Regla
-    ↓
-Historia / caso de uso
-    ↓
-Criterio de aceptación
-    ↓
-Decisión
-    ↓
-Baseline / Change Request cuando aplique
+Business
+  ↓
+Stakeholder
+  ↓
+Solution / Transition
+  ↓
+Proceso / Regla
+  ↓
+Criterio de Aceptación
+  ↓
+UAT / Prueba futura
+  ↓
+Evidencia
 ```
 
-## 15. Priorizar cuando el workflow lo requiera
+## 13. Priorizar
+Aplicar técnica apropiada con datos trazables. No inventar scores.
 
-1. definir criterios;
-2. comprobar que los requisitos son suficientemente claros;
-3. recopilar datos de valor, alcance, confianza, esfuerzo, urgencia y dependencias;
-4. aplicar MoSCoW, RICE, WSJF, Kano, Value vs Effort o ranking según contexto;
-5. revisar dependencias y restricciones;
-6. registrar rationale e incertidumbre;
-7. presentar recomendación;
-8. obtener validación de autoridad.
+## 14. Crear baseline
+Solo con calidad suficiente, trazabilidad, autoridad y contradicciones críticas gestionadas.
 
-No inventar scores ni convertir una recomendación en decisión oficial.
+## 15. Procesar Change Requests
+Registrar solicitud, impacto, handoffs técnicos, decisión, nueva versión e historial.
 
-## 16. Crear o actualizar baseline
+## 16. Preparar UAT cuando aplique
 
-Solo cuando:
-- los requisitos tengan calidad suficiente;
-- la priorización necesaria esté validada;
-- la trazabilidad mínima exista;
-- la autoridad correspondiente apruebe;
-- las contradicciones críticas estén resueltas o aceptadas.
+1. identificar baseline/release objetivo;
+2. definir alcance;
+3. definir entrada/salida;
+4. seleccionar usuarios reales adecuados;
+5. preparar entorno/datos con responsables correspondientes;
+6. diseñar escenarios desde requisitos, criterios y BPMN TO-BE;
+7. asegurar trazabilidad.
 
-Registrar versión, fecha, aprobadores, requisitos, artefactos y riesgos aceptados.
+## 17. Acompañar UAT
 
-## 17. Procesar Change Requests
+Durante ejecución:
+- facilitar;
+- aclarar requisitos;
+- registrar pass/fail/bloqueado;
+- conservar evidencia;
+- distinguir defecto, cambio o incertidumbre;
+- enrutar defectos a QA/desarrollo;
+- enrutar cambios a Change Control.
 
-Cuando exista un cambio sobre baseline:
+## 18. Preparar sign-off
 
-1. registrar solicitud;
-2. identificar requisitos afectados;
-3. ejecutar análisis de impacto;
-4. pedir análisis técnico/QA/legal cuando corresponda;
-5. preparar alternativas;
-6. registrar decisión de autoridad;
-7. actualizar artefactos aprobados;
-8. generar nueva versión/baseline cuando aplique;
-9. comunicar impacto;
-10. conservar historial.
+Consolidar:
+- cobertura;
+- resultados;
+- defectos abiertos;
+- riesgos aceptados;
+- excepciones;
+- cambios;
+- evidencias;
+- estado de criterios de salida.
 
-## 18. Validar calidad del paquete
-Comprobar claridad, consistencia, trazabilidad, testabilidad, prioridades, vigencia, cambios, modelos y contradicciones.
+El agente prepara información; la autoridad decide aceptación o Go / No-Go.
 
-## 19. Entregar
+## 19. Definir métricas de IA cuando aplique
+
+1. identificar tipo de componente de IA;
+2. partir del objetivo de negocio;
+3. seleccionar categoría de métrica relevante;
+4. definir métrica operacionalmente;
+5. definir dataset/muestra;
+6. definir método;
+7. obtener umbral con fuente;
+8. definir frecuencia;
+9. definir responsable;
+10. definir acción por incumplimiento;
+11. diseñar evaluación offline/online;
+12. vincular drift y actualizaciones al Change Control.
+
+## 20. Aplicar jerarquía de estándares
+
+Antes de usar una norma/guía:
+- identificar versión;
+- obligatoriedad;
+- aplicabilidad;
+- relación con políticas internas;
+- conflictos.
+
+No resolver conflictos por preferencia.
+
+## 21. Validar paquete
+
+Comprobar claridad, consistencia, trazabilidad, testabilidad, prioridades, vigencia, cambios, modelos, UAT y métricas.
+
+## 22. Entregar
 
 Generar handoff con:
-- documentos revisados;
-- requisitos por estado;
+- documentos;
+- requisitos jerarquizados;
 - calidad;
-- criterios de aceptación;
-- reglas;
-- modelos AS-IS/TO-BE;
-- priorización y estado de validación;
-- baseline/CR relevantes;
+- criterios;
+- modelos;
+- priorización;
+- baseline/CR;
+- UAT;
+- métricas IA;
 - contradicciones;
 - incertidumbres;
-- evidencias;
+- evidencia;
 - bloqueos;
 - preguntas al supervisor.
 
-## 20. Mantener
+## 23. Mantener
 
-Cuando cambie un artefacto:
+Ante cambios:
 - analizar impacto;
-- actualizar relaciones;
-- marcar posibles obsolescencias;
+- actualizar trazabilidad;
 - revisar prioridad;
-- revisar criterios;
+- revisar UAT;
+- revisar métricas;
 - procesar Change Request si afecta baseline;
-- no sobrescribir silenciosamente historia previa.
+- conservar historial.
