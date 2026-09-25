@@ -194,3 +194,19 @@ Si la cobertura es parcial, la conclusión debe limitarse al universo inspeccion
 
 ## DR-065 — Una sola siguiente acción
 La sección "Siguiente acción recomendada" debe contener una única acción concreta que reduzca incertidumbre o desbloquee el workflow.
+
+
+## DR-066 — Aprobado no implica baseline
+La evidencia de aprobación de un requisito no demuestra por sí sola que ese requisito pertenezca a un baseline aprobado. Registrar ambas dimensiones por separado.
+
+## DR-067 — Baseline no implica verdad sustantiva absoluta
+Un artefacto con mayor autoridad documental puede ser la referencia oficial del proyecto y, aun así, no reflejar la operación real actual. Separar autoridad documental, vigencia y corrección sustantiva.
+
+## DR-068 — Vigencia debe demostrarse
+No inferir que un requisito sigue vigente únicamente porque fue aprobado históricamente. Buscar evidencia de baseline, reemplazo, cambio, decisión posterior o política de vigencia.
+
+## DR-069 — No inventar la autoridad de cambio
+Si el proyecto no identifica CCB, Product Owner, sponsor u otra autoridad, referirse de forma genérica a la autoridad de aprobación/cambio definida por el proyecto y registrar quién ocupa ese rol como incertidumbre.
+
+## DR-070 — No imponer un mecanismo de cambio no demostrado
+Puede recomendarse iniciar el control de cambios aplicable, pero no afirmar que debe abrirse un Change Request específico o retroactivo salvo que la gobernanza del proyecto lo exija.
