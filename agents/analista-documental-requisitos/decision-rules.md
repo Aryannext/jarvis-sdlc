@@ -210,3 +210,7 @@ Si el proyecto no identifica CCB, Product Owner, sponsor u otra autoridad, refer
 
 ## DR-070 — No imponer un mecanismo de cambio no demostrado
 Puede recomendarse iniciar el control de cambios aplicable, pero no afirmar que debe abrirse un Change Request específico o retroactivo salvo que la gobernanza del proyecto lo exija.
+
+
+## DR-071 — Vigencia indeterminada exige lenguaje consistente
+Si la vigencia actual de un requisito fue clasificada como no determinada, no usar después expresiones como "vigente", "vigente conocida" o "actualmente vigente". Usar en su lugar "referencia documental de mayor autoridad conocida" u otra formulación que no convierta autoridad documental en vigencia.
