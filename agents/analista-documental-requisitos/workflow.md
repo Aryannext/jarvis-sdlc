@@ -1,239 +1,140 @@
 # Workflow — Analista Documental y de Requisitos v0.1
 
 ## 1. Recibir contexto
-
-Confirmar:
-- objetivo de la tarea;
-- proyecto;
-- estado del workflow;
-- permisos;
-- fuentes disponibles;
-- salida esperada.
-
-No iniciar análisis profundo si el objetivo no está claro.
+Confirmar objetivo, proyecto, estado del workflow, permisos, fuentes disponibles y salida esperada.
 
 ## 2. Inventariar documentación
-
-Localizar y clasificar artefactos por:
-- tipo;
-- ruta;
-- versión;
-- fecha;
-- estado;
-- relación con el proyecto.
-
-No interpretar todavía todo el contenido. Primero conocer qué existe.
+Localizar y clasificar artefactos por tipo, ruta, versión, fecha, estado y relación con el proyecto.
 
 ## 3. Evaluar control documental
+Revisar duplicados, versiones, documentos sin fecha/responsable, referencias rotas, obsolescencia, contradicciones, aprobaciones y ausencias.
 
-Revisar:
-- duplicados;
-- versiones;
-- documentos sin fecha;
-- documentos sin responsable;
-- referencias rotas;
-- documentación obsoleta;
-- documentos contradictorios;
-- evidencias de aprobación;
-- artefactos faltantes.
+## 4. Ejecutar elicitación cuando sea necesaria
+Elegir técnica según contexto: análisis documental, entrevista, workshop, observación, encuesta, prototipo, escenario o análisis de interfaces.
 
-Registrar problemas documentales por separado de problemas funcionales.
+## 5. Extraer información de negocio y requisitos
+Identificar necesidades, objetivos, stakeholders, procesos, requisitos funcionales/no funcionales, restricciones, reglas, criterios, supuestos y dependencias.
 
-## 4. Extraer información de negocio y requisitos
+## 6. Clasificar certeza
+Marcar cada elemento como confirmado, candidato, contradictorio, incompleto, obsoleto, rechazado o desconocido.
 
-Identificar:
-- necesidades;
-- objetivos;
-- stakeholders;
-- procesos;
-- requisitos funcionales;
-- requisitos no funcionales;
-- restricciones;
-- reglas de negocio;
-- criterios de aceptación;
-- supuestos;
-- dependencias.
+## 7. Evaluar calidad del requisito individual
+Evaluar necesidad, nivel de abstracción, ambigüedad, completitud, atomicidad, factibilidad, verificabilidad, corrección y conformidad.
 
-Todo elemento extraído debe conservar vínculo con su fuente.
+## 8. Evaluar calidad del conjunto
+Revisar completitud, consistencia, factibilidad conjunta, comprensibilidad, trazabilidad y terminología.
 
-## 5. Clasificar certeza
+## 9. Evaluar historias de usuario
+Aplicar INVEST cuando corresponda sin convertirlo en scoring mecánico.
 
-Para cada elemento:
-- confirmado;
-- candidato;
-- contradictorio;
-- incompleto;
-- obsoleto;
-- rechazado;
-- desconocido.
+## 10. Evaluar criterios de aceptación
+Comprobar especificidad, observabilidad, pass/fail, atomicidad, cobertura y ausencia de implementación injustificada.
 
-No promover un candidato a confirmado solo porque aparezca repetido varias veces si todas las referencias provienen de la misma fuente no validada.
+## 11. Detectar contradicciones y brechas
+Buscar incompatibilidades, falta de fuente, AS-IS/TO-BE mezclados, restricciones sin justificación, criterios insuficientes y términos vagos.
 
-## 6. Evaluar calidad del requisito individual
+## 12. Proponer reformulación
+Conservar original, enumerar defectos, identificar información faltante, proponer versión mejorada y mantenerla como propuesta hasta validación.
 
-Para cada requisito relevante evaluar, según aplique:
+## 13. Modelar procesos cuando aporte valor
 
-- necesario;
-- apropiado al nivel de abstracción;
-- no ambiguo;
-- completo;
-- singular/atómico;
-- factible;
-- verificable;
-- correcto respecto a la necesidad conocida;
-- conforme a las reglas de redacción del proyecto.
+### AS-IS
+Construir a partir de entrevistas, observación, documentación y evidencia operativa.
 
-No basta con marcar "malo". Para cada defecto indicar:
-- característica incumplida;
-- fragmento problemático;
-- por qué genera riesgo;
-- información que falta;
-- propuesta de mejora cuando pueda hacerse sin inventar significado.
+### TO-BE
+Diseñar únicamente con problemas, necesidades, restricciones y decisiones validadas.
 
-## 7. Evaluar calidad del conjunto
+### BPMN
+Usar elementos básicos suficientes para representar actores, tareas, decisiones, mensajes y datos sin complejidad innecesaria.
 
-Revisar el conjunto por:
-- completitud;
-- consistencia;
-- factibilidad conjunta;
-- comprensibilidad;
-- trazabilidad;
-- terminología coherente.
+Todo requisito derivado del modelo entra como candidato.
 
-Un requisito individual puede ser correcto y aun así entrar en conflicto con otro.
-
-## 8. Evaluar historias de usuario
-
-Cuando existan historias de usuario, aplicar INVEST como marco de revisión:
-
-- Independiente;
-- Negociable;
-- Valiosa;
-- Estimable;
-- Pequeña;
-- Comprobable.
-
-No rechazar automáticamente una historia por incumplir una letra. Registrar el impacto y proponer división, aclaración o validación según contexto.
-
-## 9. Evaluar criterios de aceptación
-
-Comprobar que cada criterio relevante sea:
-- específico;
-- medible cuando la naturaleza del requisito lo permita;
-- evaluable como pass/fail;
-- observable desde el comportamiento esperado;
-- atómico;
-- suficiente para el escenario que pretende cubrir;
-- independiente de detalles de implementación salvo restricción aprobada.
-
-Revisar cobertura de:
-- camino feliz;
-- errores;
-- casos límite;
-- estados vacíos o mínimos;
-- concurrencia cuando aplique;
-- rendimiento u otros atributos de calidad cuando aplique.
-
-Cuando sea útil, proponer Given–When–Then:
-- Given: contexto o precondición;
-- When: acción o disparador;
-- Then: resultado observable.
-
-No inventar métricas para convertir un criterio subjetivo en medible.
-
-## 10. Detectar contradicciones y brechas
-
-Buscar:
-- requisitos incompatibles;
-- criterios de aceptación que no prueban el requisito;
-- historias sin criterio;
-- criterios que prueban solo una parte del requisito;
-- reglas sin fuente;
-- documentos más recientes sin evidencia de aprobación;
-- procesos as-is y to-be mezclados;
-- requisitos expresados como solución sin necesidad identificada;
-- requisitos no verificables;
-- documentos que mencionan funcionalidades sin requisito asociado;
-- términos vagos o subjetivos;
-- múltiples obligaciones mezcladas en una sola oración;
-- restricciones técnicas sin justificación.
-
-## 11. Proponer reformulación
-
-Cuando un requisito esté mal formulado:
-
-1. conservar el original;
-2. enumerar defectos;
-3. identificar información faltante;
-4. proponer una versión mejorada solo si el significado puede conservarse;
-5. proponer criterios de aceptación separados;
-6. marcar la reformulación como propuesta hasta que sea validada.
-
-La reformulación no reemplaza silenciosamente al requisito original.
-
-## 12. Elicitar o preparar elicitación
-
-Si faltan datos:
-- formular pregunta exacta;
-- indicar a quién debería dirigirse;
-- explicar por qué importa;
-- registrar qué evidencia sería aceptable.
-
-Si no hay stakeholder disponible, marcar el punto como no validado y escalar según la política del Orquestador.
-
-## 13. Construir trazabilidad
-
-Relacionar cuando exista evidencia:
+## 14. Construir trazabilidad
 
 ```text
+Fuente / sesión / proceso
+    ↓
 Necesidad
-   ↓
+    ↓
 Requisito
-   ↓
-Regla de negocio
-   ↓
+    ↓
+Regla
+    ↓
 Historia / caso de uso
-   ↓
+    ↓
 Criterio de aceptación
-   ↓
-Decisión relacionada
+    ↓
+Decisión
+    ↓
+Baseline / Change Request cuando aplique
 ```
 
-Las relaciones con código y pruebas pueden completarse posteriormente por otros estados del workflow.
+## 15. Priorizar cuando el workflow lo requiera
 
-## 14. Validar calidad del paquete
+1. definir criterios;
+2. comprobar que los requisitos son suficientemente claros;
+3. recopilar datos de valor, alcance, confianza, esfuerzo, urgencia y dependencias;
+4. aplicar MoSCoW, RICE, WSJF, Kano, Value vs Effort o ranking según contexto;
+5. revisar dependencias y restricciones;
+6. registrar rationale e incertidumbre;
+7. presentar recomendación;
+8. obtener validación de autoridad.
 
-Comprobar:
-- claridad;
-- consistencia;
-- completitud razonable;
-- trazabilidad;
-- posibilidad de prueba;
-- calidad de criterios de aceptación;
-- ausencia de contradicciones ocultas;
-- incertidumbres explícitas.
+No inventar scores ni convertir una recomendación en decisión oficial.
 
-## 15. Entregar
+## 16. Crear o actualizar baseline
+
+Solo cuando:
+- los requisitos tengan calidad suficiente;
+- la priorización necesaria esté validada;
+- la trazabilidad mínima exista;
+- la autoridad correspondiente apruebe;
+- las contradicciones críticas estén resueltas o aceptadas.
+
+Registrar versión, fecha, aprobadores, requisitos, artefactos y riesgos aceptados.
+
+## 17. Procesar Change Requests
+
+Cuando exista un cambio sobre baseline:
+
+1. registrar solicitud;
+2. identificar requisitos afectados;
+3. ejecutar análisis de impacto;
+4. pedir análisis técnico/QA/legal cuando corresponda;
+5. preparar alternativas;
+6. registrar decisión de autoridad;
+7. actualizar artefactos aprobados;
+8. generar nueva versión/baseline cuando aplique;
+9. comunicar impacto;
+10. conservar historial.
+
+## 18. Validar calidad del paquete
+Comprobar claridad, consistencia, trazabilidad, testabilidad, prioridades, vigencia, cambios, modelos y contradicciones.
+
+## 19. Entregar
 
 Generar handoff con:
 - documentos revisados;
 - requisitos por estado;
-- resultados de calidad;
-- criterios de aceptación y defectos;
-- reglas de negocio;
+- calidad;
+- criterios de aceptación;
+- reglas;
+- modelos AS-IS/TO-BE;
+- priorización y estado de validación;
+- baseline/CR relevantes;
 - contradicciones;
 - incertidumbres;
 - evidencias;
 - bloqueos;
-- preguntas al supervisor;
-- siguiente acción recomendada.
+- preguntas al supervisor.
 
-## 16. Mantener
+## 20. Mantener
 
-Cuando cambie un documento:
-- detectar impacto;
+Cuando cambie un artefacto:
+- analizar impacto;
 - actualizar relaciones;
-- marcar artefactos potencialmente obsoletos;
-- solicitar revisión de requisitos afectados;
-- revisar criterios de aceptación relacionados;
-- no sobrescribir silenciosamente la historia previa.
+- marcar posibles obsolescencias;
+- revisar prioridad;
+- revisar criterios;
+- procesar Change Request si afecta baseline;
+- no sobrescribir silenciosamente historia previa.
