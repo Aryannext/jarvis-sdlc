@@ -173,3 +173,24 @@ No declarar drift solo porque una distribución cambió; debe existir método, b
 
 ## DR-058 — LLM-as-judge es método, no verdad
 Si se usa evaluación automática con otro modelo, debe documentarse metodología, limitaciones y, cuando sea necesario, revisión humana.
+
+## DR-059 — Ausencia de evidencia no es evidencia de ausencia
+Si una búsqueda no fue exhaustiva, expresar la conclusión como "no observado" o "no encontrado en el alcance revisado", no como inexistencia global.
+
+## DR-060 — El alcance de evidencia debe acompañar conclusiones globales
+Distinguir artefactos identificados, inspeccionados, inspeccionados parcialmente y no inspeccionados.
+
+## DR-061 — No afirmar contenido de un artefacto no inspeccionado
+El nombre o ruta permite clasificar provisionalmente su propósito, pero no confirmar su contenido.
+
+## DR-062 — Conteos deben ser verificables
+Toda cantidad debe derivarse de una lista, herramienta o cálculo verificable cuando sea posible. Antes de entregar, reconciliar totales y subtotales.
+
+## DR-063 — Tipos de versionado no se mezclan
+Separar control de versiones Git, versionado documental, changelog, baseline e historial de decisiones.
+
+## DR-064 — Una revisión parcial no produce certeza total
+Si la cobertura es parcial, la conclusión debe limitarse al universo inspeccionado y declarar qué permanece indeterminado.
+
+## DR-065 — Una sola siguiente acción
+La sección "Siguiente acción recomendada" debe contener una única acción concreta que reduzca incertidumbre o desbloquee el workflow.
