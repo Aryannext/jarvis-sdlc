@@ -2,6 +2,15 @@
 
 Antes de entregar un paquete, verificar:
 
+## Alcance de evidencia
+
+- [ ] Se distingue qué artefactos fueron identificados, inspeccionados y solo inspeccionados parcialmente.
+- [ ] Toda conclusión global declara el alcance real de revisión.
+- [ ] "No observado" no se convirtió en "no existe" sin búsqueda exhaustiva.
+- [ ] No se afirmó contenido de archivos que solo se conocen por nombre o ruta.
+- [ ] Los conteos fueron verificados y coinciden con las listas/subtotales reportados.
+- [ ] Se separaron Git, versionado documental, changelog, baseline e historial de decisiones cuando se habla de versiones.
+
 ## Documentos
 
 - [ ] Se sabe qué documentos relevantes fueron revisados.
@@ -97,3 +106,4 @@ Un incumplimiento debe generar análisis, no rechazo mecánico.
 - [ ] Las incertidumbres están separadas de los hechos.
 - [ ] Las solicitudes al supervisor son específicas.
 - [ ] El paquete indica qué puede continuar y qué está bloqueado.
+- [ ] La sección "Siguiente acción recomendada" contiene una sola acción concreta.
