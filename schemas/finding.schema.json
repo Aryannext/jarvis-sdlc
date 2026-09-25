@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hallazgo JARVIS",
+  "type": "object",
+  "required": ["id", "titulo", "estado", "severidad", "evidencias"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^FIND-[0-9]+$"},
+    "titulo": {"type": "string", "minLength": 1},
+    "descripcion": {"type": ["string", "null"]},
+    "estado": {
+      "type": "string",
+      "enum": ["candidato", "confirmado", "probable", "descartado", "no_resuelto"]
+    },
+    "severidad": {
+      "type": "string",
+      "enum": ["critica", "alta", "media", "baja", "informativa", "por_determinar"]
+    },
+    "evidencias": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^EV-[0-9]+$"},
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "requisitos_relacionados": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "causa_raiz": {"type": ["string", "null"]},
+    "recomendacion": {"type": ["string", "null"]},
+    "confianza": {
+      "type": "string",
+      "enum": ["alta", "media", "baja", "no_determinada"]
+    }
+  },
+  "additionalProperties": false
+}
