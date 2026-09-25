@@ -31,6 +31,19 @@ riesgos_aceptados: []
 estado: propuesto | aprobado | reemplazado | archivado
 ```
 
+## Distinción previa: requisito aprobado vs baseline
+
+Un requisito aprobado no se considera automáticamente parte de un baseline.
+
+Antes de aplicar reglas de baseline, verificar cuando sea posible:
+- si el requisito fue incorporado formalmente a un baseline;
+- cuál baseline;
+- fecha y autoridad de aprobación;
+- si existe una versión posterior;
+- si su vigencia actual está confirmada.
+
+La aprobación histórica, la inclusión en baseline y la vigencia son estados distintos.
+
 ## Regla fundamental
 
 Un baseline aprobado no se edita silenciosamente.
