@@ -88,3 +88,106 @@ Si no puede determinarse cuál representa un documento, marcar incertidumbre.
 ## DR-012 — No completar huecos con conocimiento del modelo
 
 El agente puede sugerir preguntas o hipótesis, pero no llenar información faltante como si hubiera sido proporcionada por el proyecto.
+
+## DR-013 — Evaluar calidad sin confundirla con aprobación
+
+Un requisito confirmado puede tener mala calidad de redacción.
+
+Un requisito bien redactado puede seguir siendo un candidato no aprobado.
+
+Registrar ambas dimensiones por separado.
+
+## DR-014 — Término subjetivo exige definición
+
+Palabras como:
+- rápido;
+- intuitivo;
+- amigable;
+- frecuentemente;
+- eficiente;
+- óptimo;
+- mejor;
+
+deben considerarse señales de ambigüedad o falta de verificabilidad cuando no exista definición contextual.
+
+No inventar la métrica que falta.
+
+## DR-015 — Una obligación principal por requisito
+
+Si un requisito contiene varias capacidades independientes, proponer separación.
+
+No dividir mecánicamente cuando las condiciones forman una única obligación inseparable.
+
+## DR-016 — Qué antes que cómo
+
+Los requisitos deben describir la necesidad o comportamiento esperado y evitar imponer implementación, salvo que exista una restricción aprobada.
+
+Toda tecnología prescrita debe clasificarse como:
+- restricción;
+- decisión;
+- preferencia;
+- o solución candidata.
+
+## DR-017 — Longitud es heurística, no veredicto
+
+La investigación aportada recomienda requisitos breves, alrededor de 25 palabras cuando sea razonable.
+
+No marcar un requisito como incorrecto solo por superar esa longitud. Usar la longitud como señal para revisar atomicidad, claridad y complejidad.
+
+## DR-018 — Criterio de aceptación debe poder fallar
+
+Un criterio válido debe permitir determinar objetivamente si se cumple o no.
+
+Si expresiones como "debe sentirse", "debe ser adecuado" o "debe funcionar bien" impiden una decisión pass/fail, marcarlo como incompleto.
+
+## DR-019 — Given–When–Then es formato preferente, no obligatorio
+
+Usar Given–When–Then cuando mejore claridad y automatización.
+
+Permitir checklist o reglas cuando representen mejor el comportamiento.
+
+No forzar Gherkin si genera redacción artificial.
+
+## DR-020 — Criterio observable, no implementación interna
+
+El criterio debe describir resultado observable, salvo que la propia restricción técnica sea parte aprobada del requisito.
+
+## DR-021 — No inventar umbrales
+
+Si un requisito dice "rápido", el agente puede indicar que necesita una métrica, pero no decidir por sí mismo "3 segundos" o "95 %" sin fuente o autoridad.
+
+## DR-022 — Cobertura de criterios depende del riesgo
+
+Revisar no solo happy path.
+
+Según contexto considerar:
+- errores;
+- límites;
+- valores vacíos o mínimos;
+- concurrencia;
+- rendimiento;
+- seguridad;
+- otros atributos de calidad relevantes.
+
+No exigir todos los tipos en todas las historias si no aplican.
+
+## DR-023 — INVEST evalúa historias, no reemplaza requisitos
+
+INVEST puede detectar historias problemáticas, pero no convierte una historia en requisito aprobado ni sustituye trazabilidad y reglas de negocio.
+
+## DR-024 — Reformular no es aprobar
+
+Toda reformulación producida por el agente es una propuesta.
+
+Debe conservar:
+- original;
+- defectos encontrados;
+- versión propuesta;
+- cambios de significado potenciales;
+- validación requerida.
+
+## DR-025 — Métricas de sistemas con IA también requieren fuente
+
+Tasas de precisión, F1, alucinación, latencia o explicabilidad pueden ser criterios válidos cuando el sistema lo requiera.
+
+El agente no debe escoger valores objetivo sin evidencia de negocio, técnica, regulatoria o experimental.
