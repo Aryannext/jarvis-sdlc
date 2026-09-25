@@ -2,19 +2,23 @@
 
 Estas áreas no se completaron con conocimiento genérico. Requieren investigación adicional del supervisor o una decisión explícita del proyecto.
 
-## 1. Calidad formal de requisitos
+## Resuelto en esta iteración
 
-Necesitamos definir qué estándar o marco usaremos para evaluar, de manera consistente:
-- claridad;
-- atomicidad;
-- verificabilidad;
-- completitud;
-- consistencia;
-- factibilidad;
-- necesidad;
-- ausencia de ambigüedad.
+La investigación aportada por el supervisor permitió definir una primera política para:
 
-## 2. Elicitación
+- calidad individual de requisitos;
+- calidad del conjunto;
+- uso de características asociadas a ISO/IEC/IEEE 29148 e INCOSE;
+- INVEST para historias de usuario;
+- criterios de aceptación;
+- uso preferente de Given–When–Then cuando sea apropiado;
+- detección de ambigüedad, falta de atomicidad y falta de verificabilidad;
+- propuestas de reformulación;
+- prohibición de inventar métricas o umbrales.
+
+Esto reduce dos huecos anteriores: calidad formal de requisitos y criterios de aceptación.
+
+## 1. Elicitación
 
 Falta definir en mayor detalle:
 - cómo preparar entrevistas;
@@ -24,7 +28,7 @@ Falta definir en mayor detalle:
 - cómo documentar desacuerdos;
 - cómo cerrar una sesión.
 
-## 3. Priorización
+## 2. Priorización
 
 Aún no se ha elegido un método:
 - MoSCoW;
@@ -35,7 +39,7 @@ Aún no se ha elegido un método:
 
 No se debe incorporar ninguna por defecto sin decisión.
 
-## 4. Baseline y control de cambios
+## 3. Baseline y control de cambios
 
 Falta definir:
 - cuándo un requisito entra en baseline;
@@ -44,7 +48,7 @@ Falta definir:
 - cómo propagar impacto;
 - cuándo una versión deja de ser vigente.
 
-## 5. Modelado
+## 4. Modelado
 
 La investigación menciona BPMN, casos de uso y diagramas, pero falta decidir:
 - cuándo usar cada técnica;
@@ -52,19 +56,31 @@ La investigación menciona BPMN, casos de uso y diagramas, pero falta decidir:
 - formato esperado;
 - reglas de calidad.
 
-## 6. Criterios de aceptación
-
-Falta definir:
-- formato preferido;
-- condiciones mínimas;
-- relación exacta con historias/requisitos;
-- cómo tratar criterios no verificables.
-
-## 7. UAT
+## 5. UAT
 
 Falta establecer:
 - responsabilidad exacta del agente;
 - diferencia entre preparar UAT y aprobar UAT;
 - evidencia necesaria.
 
-Estas preguntas no bloquean la versión 0.1 para inventario, extracción, contradicciones y trazabilidad básica, pero sí deben resolverse antes de considerar al agente maduro.
+## 6. Jerarquía de estándares
+
+La investigación menciona ISO/IEC/IEEE 29148, INCOSE, BABOK e INVEST.
+
+Antes de una versión madura debemos definir:
+- cuál es el marco principal cuando existan diferencias;
+- qué reglas son obligatorias del proyecto y cuáles son heurísticas;
+- cómo manejar organizaciones que tengan su propia plantilla o estándar.
+
+## 7. Métricas para sistemas con IA
+
+La investigación indica que los criterios pueden incluir precisión, F1, alucinaciones, explicabilidad y otras métricas.
+
+Falta definir:
+- cuándo aplica cada métrica;
+- cómo medirla;
+- qué conjunto de evaluación se requiere;
+- quién define los umbrales;
+- cómo evitar métricas engañosas.
+
+Estas preguntas no bloquean la versión 0.1 para inventario, extracción, evaluación de calidad, contradicciones y trazabilidad básica, pero deben resolverse antes de considerar al agente maduro.
